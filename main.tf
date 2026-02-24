@@ -32,7 +32,7 @@ resource "azurerm_monitor_aad_diagnostic_setting" "signin_logs" {
   enabled_log {
     category = "SignInLogs"
     retention_policy {
-      enabled = true
+      enabled = false
       days    = var.log_retention_days
     }
   }
@@ -40,7 +40,7 @@ resource "azurerm_monitor_aad_diagnostic_setting" "signin_logs" {
   enabled_log {
     category = "NonInteractiveUserSignInLogs"
     retention_policy {
-      enabled = true
+      enabled = false
       days    = var.log_retention_days
     }
   }
@@ -48,7 +48,7 @@ resource "azurerm_monitor_aad_diagnostic_setting" "signin_logs" {
   enabled_log {
     category = "ServicePrincipalSignInLogs"
     retention_policy {
-      enabled = true
+      enabled = false
       days    = var.log_retention_days
     }
   }
@@ -56,7 +56,7 @@ resource "azurerm_monitor_aad_diagnostic_setting" "signin_logs" {
   enabled_log {
     category = "AuditLogs"
     retention_policy {
-      enabled = true
+      enabled = false
       days    = var.log_retention_days
     }
   }

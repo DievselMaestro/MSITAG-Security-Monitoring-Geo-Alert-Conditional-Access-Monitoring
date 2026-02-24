@@ -116,7 +116,7 @@ variable "alert_severity" {
 variable "log_retention_days" {
   description = "Aufbewahrungsdauer der Logs in Tagen (30-730)"
   type        = number
-  default     = 90
+  default     = 30
 
   validation {
     condition     = var.log_retention_days >= 30 && var.log_retention_days <= 730
